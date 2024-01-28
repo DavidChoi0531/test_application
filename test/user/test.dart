@@ -35,11 +35,6 @@ void main() {
     /// 해당 코드는 [userStateProvider]의 초기화시 [User] 객체가 null에서 기본값을 가진 [User] 객체로 단 1번 변화하는지 확인한다.
     verify(listener(null, any)).called(1);
 
-    // verifyInOrder([
-    //   listener(null, any),
-    //   listener(any, user),
-    // ]);
-
     /// 해당 코드는 명시적인 호출 이외의 추가적인 interaction이 없는지 확인한다.
     verifyNoMoreInteractions(listener);
 
